@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Axiom Identity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root" class="hidden">
+    <section class="card" role="dialog" aria-modal="true" aria-labelledby="ttl">
+      <header class="head">
+        <div class="title">
+          <h1 id="ttl">Identity</h1>
+          <p class="sub">Axiom Core · Player</p>
+        </div>
+        <button class="close" id="btnClose" aria-label="Schließen">×</button>
+      </header>
+
+      <div class="grid">
+        <div class="field">
+          <div class="label">Name</div>
+          <div class="value" id="v-name">–</div>
+        </div>
+        <div class="field">
+          <div class="label">UID</div>
+          <div class="value mono" id="v-uid">–</div>
+        </div>
+        <div class="field">
+          <div class="label">CID</div>
+          <div class="value mono" id="v-cid">–</div>
+        </div>
+        <div class="field">
+          <div class="label">License</div>
+          <div class="value mono" id="v-lic">–</div>
+        </div>
+        <div class="field span2">
+          <div class="label">Zuletzt gesehen</div>
+          <div class="value" id="v-last">–</div>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <div class="hint">ESC zum Schließen · /idui zum Öffnen</div>
+      </footer>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
