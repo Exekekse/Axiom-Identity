@@ -1,0 +1,1 @@
+- Identity service is now schema-agnostic (supports modern, legacy, and minimal schemas) and resolves by uid/serverId or generic <kind>:<value> identifiers. Eliminates 'Unknown column' crashes.

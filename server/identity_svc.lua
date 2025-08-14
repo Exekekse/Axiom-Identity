@@ -1,4 +1,6 @@
--- Globaler Namespace für das Modul
+-- Schema-agnostischer Identity-Resolver; lädt Identifiers erst nach
+-- Schema-Probe und vermeidet so "Unknown column"-Crashes auf
+-- unterschiedlichen Datenbank-Schemata.
 AxIdentity = AxIdentity or {}
 AxIdentity.svc = AxIdentity.svc or {}
 
