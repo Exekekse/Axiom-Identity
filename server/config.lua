@@ -6,4 +6,5 @@ AxIdentity.cfg = {
   mask_license        = true,
   mask_prefix         = 8,
   auto_open_on_ready  = true,   -- << NEU: beim Charakter-Ready automatisch öffnen
+  log_level           = 'info',
 }

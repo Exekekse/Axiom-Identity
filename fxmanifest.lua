@@ -22,6 +22,7 @@ files {
 
 server_scripts {
   'server/config.lua',
+  'server/logger.lua',
   'server/identity_svc.lua',
   'server/main.lua'
 }

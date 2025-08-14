@@ -1,4 +1,4 @@
-local log = (Axiom and Axiom.log) or { info=print, warn=print, error=print }
+local log = AxIdentity.log
 local cfg = AxIdentity and AxIdentity.cfg or {}
 local SVC = AxIdentity.svc
 
@@ -18,6 +18,7 @@ end
 -- Auto-Open UI, wenn der Core meldet "character ready"
 -- Core kann (cid, uid [, src]) senden – src ist optional
 RegisterNetEvent('Axiom:character:ready', function(cid, uid, evSrc)
+  local reqId = log.newCid()
   if not cfg.auto_open_on_ready then return end
   if not uid or not cid then return end
 
@@ -41,5 +42,5 @@ RegisterNetEvent('Axiom:character:ready', function(cid, uid, evSrc)
   -- ViewModel + an Client schicken → Client öffnet UI
   local vm = SVC.viewModel(data)
   TriggerClientEvent('axi-id:response', targetSrc, { ok=true, data=vm })
-  log.info('[ax_identity] auto-open sent to src=%s uid=%s cid=%s', tostring(targetSrc), tostring(vm.uid), tostring(cid))
+  log.info(reqId, 'auto-open sent to src=%s uid=%s cid=%s', tostring(targetSrc), tostring(vm.uid), tostring(cid))
 end)
