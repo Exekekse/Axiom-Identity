@@ -208,7 +208,7 @@ end
 function AxIdentity.svc.getSafe(target)
   local data = AxIdentity.svc.resolveTarget(target)
   if not data then
-    return { ok=false, code='E_NOT_FOUND', msg='identity not found' }
+    return { ok=false, error={ code='E_NOT_FOUND', message='identity not found' } }
   end
   return { ok=true, data=data }
 end
